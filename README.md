@@ -6,7 +6,7 @@ cd /atv_lab
 
 curl https://api.github.com/repos/[dono do repositorio]/[nome do repositório]/pulls?state=closed | grep “login”: | sed 's/"login"://g' | sed 's/[" ,   ]//g' | tail -n 200 | sort | uniq -c | sort -nrk1,1 |  awk '{ print $2 ", " $1}'  >[linguagem]_[nome do repositório].csv
 
-#PARA IMPORTAR OS ARQUIVOS PARA O GITHUB#
+#IMPORTAR OS ARQUIVOS PARA O GITHUB#
 
 git init
 
